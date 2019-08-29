@@ -1,0 +1,3 @@
+rootProject.name = 'list_rn_sg'
+
+include ':app'
