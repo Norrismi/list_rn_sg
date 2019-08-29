@@ -15,14 +15,10 @@ const ListScreen = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(index, item) => item.toString()}
         data={friends}
         renderItem={({ item }) => {
-          return (
-            <Text
-              style={styles.textStyle}
-            >{`${item.name} - Age ${item.age}`}</Text>
-          );
+          return <Text>{`${item.name} - Age ${item.age}`}</Text>;
         }}
       />
     </View>
